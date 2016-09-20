@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016r2sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="count" library="core" uid="18" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="345" lty="167" rbx="459" rby="223"/>
+				</component>
+				<component name="sum" library="core" uid="19" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="13"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="465" lty="366" rbx="579" rby="422"/>
+				</component>
+				<component name="equal" library="core" uid="15" kind="5" prioritycontext="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="3"/>
+						<datapoint pos="1" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="245" lty="100" rbx="298" rby="156"/>
+				</component>
+				<component name="ShortPO" library="xml" uid="4" kind="14">
+					<properties/>
+					<view rbx="194" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="ShortPO" expanded="1">
+										<entry name="CustomerNr" outkey="18"/>
+										<entry name="LineItems" outkey="19" expanded="1">
+											<entry name="LineItem" outkey="20" expanded="1">
+												<entry name="ArticleNr" outkey="21"/>
+												<entry name="Amount" outkey="22"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ShortPO.xsd" inputinstance="ShortPO.xml" outputinstance="ShortPO.xml" instanceroot="{}ShortPO"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Customers" library="xml" uid="22" kind="14">
+					<properties/>
+					<view ltx="-18" lty="252" rbx="194" rby="452"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Customers" expanded="1">
+										<entry name="Customer" outkey="23" expanded="1">
+											<entry name="Number" outkey="24"/>
+											<entry name="Address" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Customers.xsd" inputinstance="Customers.xml" outputinstance="Customers.xml" instanceroot="{}Customers"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Customer" library="core" uid="16" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+						<datapoint/>
+					</targets>
+					<view ltx="345" rbx="448" rby="56"/>
+				</component>
+				<component name="Articles" library="xml" uid="6" kind="14">
+					<properties/>
+					<view ltx="2" lty="542" rbx="194" rby="742"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Articles" expanded="1">
+										<entry name="Article" outkey="25" expanded="1">
+											<entry name="Number" outkey="26"/>
+											<entry name="Name" outkey="27"/>
+											<entry name="SinglePrice" outkey="28"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" inputinstance="Articles.xml" outputinstance="Articles.xml" instanceroot="{}Articles"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="CompletePO" library="xml" uid="9" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="617" lty="27" rbx="892" rby="628"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="CompletePO" expanded="1">
+										<entry name="Customer" inpkey="29" expanded="1">
+											<entry name="Address" expanded="1"/>
+										</entry>
+										<entry name="LineItems" inpkey="30" expanded="1">
+											<entry name="LineItem" inpkey="31" expanded="1">
+												<entry name="Article" inpkey="32" expanded="1">
+													<entry name="Number" inpkey="33"/>
+													<entry name="Name" inpkey="34"/>
+													<entry name="SinglePrice" inpkey="35"/>
+													<entry name="Amount" inpkey="36"/>
+													<entry name="Amount" inpkey="37" clone="1"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Total" expanded="1">
+											<entry name="TotalSum" inpkey="38"/>
+											<entry name="TotalItems" inpkey="39"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="CompletePO.xsd" outputinstance="CompletePO.xml" instanceroot="{}CompletePO"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="20" kind="5" prioritycontext="14">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="14"/>
+						<datapoint pos="1" key="40"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="41"/>
+					</targets>
+					<view ltx="245" lty="366" rbx="298" rby="422"/>
+				</component>
+				<component name="multiply" library="core" uid="21" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="17"/>
+						<datapoint pos="1" key="16"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="245" lty="580" rbx="320" rby="638"/>
+				</component>
+				<component name="filter" library="core" uid="10" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="42"/>
+						<datapoint pos="1" key="43"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="44"/>
+						<datapoint/>
+					</targets>
+					<view ltx="402" lty="502" rbx="505" rby="558"/>
+				</component>
+				<component name="Article" library="core" uid="17" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="8"/>
+						<datapoint pos="1" key="9"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+						<datapoint/>
+					</targets>
+					<view ltx="345" lty="252" rbx="448" rby="308"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="45">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="46">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="6" edgekey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="29" edgekey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="36" edgekey="48"/>
+							<edge vertexkey="32" edgekey="49"/>
+							<edge vertexkey="11" edgekey="50"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="39" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="38" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="42" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="3" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="30" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="31" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="14" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="37" edgekey="58"/>
+							<edge vertexkey="17" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="23">
+						<edges>
+							<edge vertexkey="5" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="2" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="8" edgekey="61"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="33" edgekey="62"/>
+							<edge vertexkey="40" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="34" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="35" edgekey="65"/>
+							<edge vertexkey="16" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="9" edgekey="67"/>
+							<edge vertexkey="43" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="13" edgekey="69"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
