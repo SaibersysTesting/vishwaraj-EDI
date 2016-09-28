@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="17">
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="794" lty="47" rbx="937" rby="131"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="type" inpkey="1" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="schema-type-recursive.xsd" instanceroot="{}type"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="31" lty="47" rbx="217" rby="123"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="schema-types" outkey="2" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="schema-type-list.xsd" inputinstance="schema-type-list.xml" instanceroot="{}schema-types"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="BuildHierarchy" library="user" blackbox="0" uid="8" kind="19" visible="0">
+					<view ltx="288" lty="47" rbx="702" rby="121"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="base" componentid="9"/>
+							<entry name="schematypes" componentid="6" expanded="1">
+								<entry name="schema-types" inpkey="3" expanded="1"/>
+							</entry>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="type" componentid="7" expanded="1">
+								<entry name="type" outkey="4" expanded="1"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="5">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="9">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="3" edgekey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="1" edgekey="9"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="BuildHierarchy" library="user" blackbox="0" uid="4" editable="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="exists" library="core" uid="19" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="44"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="45"/>
+					</targets>
+					<view ltx="165" lty="8" rbx="232" rby="47"/>
+				</component>
+				<component name="equal" library="core" uid="17" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="34"/>
+						<datapoint pos="1" key="35"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="36"/>
+					</targets>
+					<view ltx="165" lty="54" rbx="218" rby="110"/>
+				</component>
+				<component name="not-exists" library="core" uid="25" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="56"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="57"/>
+					</targets>
+					<view ltx="165" lty="117" rbx="240" rby="156"/>
+				</component>
+				<component name="if-else" library="core" uid="27" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="58"/>
+						<datapoint pos="1" key="59"/>
+						<datapoint pos="2" key="60"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="61"/>
+					</targets>
+					<view ltx="309" lty="8" rbx="406" rby="84"/>
+				</component>
+				<component name="document" library="xml" uid="7" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="701" lty="150" rbx="850" rby="249"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="type" inpkey="1" expanded="1">
+								<entry name="name" type="attribute" inpkey="43"/>
+								<entry name="type" inpkey="2"/>
+							</entry>
+						</root>
+						<document schema="schema-type-recursive.xsd" instanceroot="{}type"/>
+						<wsdl/>
+						<parameter usageKind="output" name="type" sequence="1"/>
+					</data>
+				</component>
+				<component name="BuildHierarchy" library="user" blackbox="0" uid="15" kind="19" visible="0">
+					<view ltx="210" lty="241" rbx="624" rby="274"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="base" inpkey="17" componentid="9"/>
+							<entry name="schematypes" componentid="6" expanded="1">
+								<entry name="schema-types" inpkey="18"/>
+							</entry>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="type" componentid="7" expanded="1">
+								<entry name="type" outkey="19"/>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="6" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-55" lty="148" rbx="93" rby="245"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="schema-types" outkey="4" expanded="1">
+								<entry name="type" outkey="5" expanded="1">
+									<entry name="name" type="attribute" outkey="6"/>
+									<entry name="base" type="attribute" outkey="20"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="schema-type-list.xsd" instanceroot="{}schema-types"/>
+						<wsdl/>
+						<parameter usageKind="input" name="schematypes"/>
+					</data>
+				</component>
+				<component name="type" library="core" uid="14" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="12"/>
+						<datapoint pos="1" key="21"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+						<datapoint/>
+					</targets>
+					<view ltx="492" lty="135" rbx="595" rby="191"/>
+				</component>
+				<component name="base" library="core" uid="9" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="-55" lty="88" rbx="18" rby="127"/>
+					<data>
+						<input datatype="token"/>
+						<wsdl/>
+						<parameter usageKind="input" name="base" optional="1"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="27">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="62">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="18" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="12" edgekey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="17" edgekey="28"/>
+							<edge vertexkey="43" edgekey="46"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="44" edgekey="47"/>
+							<edge vertexkey="34" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="1" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="2" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="35" edgekey="49"/>
+							<edge vertexkey="56" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="59" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="58" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="60" edgekey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="61">
+						<edges>
+							<edge vertexkey="21" edgekey="68"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
