@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="18">
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="504" lty="7" rbx="753" rby="408"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="DentalClaim" expanded="1">
+										<entry name="Submitter" expanded="1">
+											<entry name="Organization" expanded="1">
+												<entry name="OrganizationName" inpkey="61" expanded="1"/>
+												<entry name="ID" inpkey="62"/>
+											</entry>
+										</entry>
+										<entry name="Receiver">
+											<entry name="Organization" expanded="1">
+												<entry name="OrganizationName" inpkey="63"/>
+												<entry name="ID" inpkey="64"/>
+											</entry>
+										</entry>
+										<entry name="BillingProvider" inpkey="65" expanded="1">
+											<entry name="Organization" expanded="1"/>
+											<entry name="Name" expanded="1">
+												<entry name="First" inpkey="67"/>
+												<entry name="Last" inpkey="68"/>
+												<entry name="Address" expanded="1">
+													<entry name="Street" inpkey="69"/>
+													<entry name="City" inpkey="70"/>
+													<entry name="State" inpkey="71"/>
+													<entry name="Zip" inpkey="72"/>
+												</entry>
+												<entry name="PayerID" inpkey="73"/>
+												<entry name="UIN" inpkey="160"/>
+											</entry>
+											<entry name="Subscriber" expanded="1">
+												<entry name="Name" expanded="1">
+													<entry name="First" inpkey="74"/>
+													<entry name="Last" inpkey="75"/>
+													<entry name="Address" expanded="1">
+														<entry name="Street" inpkey="154"/>
+														<entry name="City" inpkey="76"/>
+														<entry name="State" inpkey="77"/>
+														<entry name="Zip" inpkey="78"/>
+													</entry>
+													<entry name="Sex" inpkey="79"/>
+													<entry name="PayerID" inpkey="80"/>
+													<entry name="DateOfBirth" inpkey="81"/>
+												</entry>
+												<entry name="Patient" expanded="1">
+													<entry name="Name">
+														<entry name="First" inpkey="82"/>
+														<entry name="Last" inpkey="83"/>
+													</entry>
+													<entry name="Services" expanded="1">
+														<entry name="Service" inpkey="84" expanded="1">
+															<entry name="number" type="attribute" inpkey="85"/>
+															<entry name="ProcedureID" inpkey="86"/>
+															<entry name="AditionalNotes" inpkey="87"/>
+															<entry name="Description" inpkey="88"/>
+															<entry name="Amount" inpkey="89"/>
+															<entry name="Tooth" inpkey="90" expanded="1">
+																<entry name="Code" inpkey="91"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="ElectronicPath" expanded="1">
+											<entry name="ClaimNumber" inpkey="155"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="837-Q2.xsd" instanceroot="{}DentalClaim" sps="HIPAA_837D.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="14" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="119"/>
+					</targets>
+					<view ltx="202" lty="472" rbx="331" rby="490"/>
+					<data>
+						<constant value="[Y,4-4][M,2-2][D,2-2]" datatype="anySimpleType"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="parse-date" library="core" uid="13" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="116"/>
+						<datapoint pos="1" key="117"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="118"/>
+					</targets>
+					<view ltx="371" lty="450" rbx="451" rby="506"/>
+				</component>
+				<component name="edi" library="text" uid="2" kind="16">
+					<properties/>
+					<view rbx="299" rby="403"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Envelope" expanded="1">
+										<entry name="Interchange" expanded="1">
+											<entry name="Group" expanded="1">
+												<entry name="Message_837-Q2" expanded="1">
+													<entry name="Loop1000A">
+														<entry name="NM1" expanded="1">
+															<entry name="F1035" outkey="22"/>
+															<entry name="F67" outkey="92"/>
+														</entry>
+													</entry>
+													<entry name="Loop1000B">
+														<entry name="NM1" expanded="1">
+															<entry name="F1035" outkey="93"/>
+															<entry name="F67" outkey="94"/>
+														</entry>
+													</entry>
+													<entry name="Loop2000A" expanded="1">
+														<entry name="Loop2010AA" outkey="95" expanded="1">
+															<entry name="NM1" expanded="1">
+																<entry name="F1035" outkey="24"/>
+																<entry name="F1036" outkey="96"/>
+																<entry name="F67" outkey="97"/>
+															</entry>
+															<entry name="N3">
+																<entry name="F166" outkey="98"/>
+															</entry>
+															<entry name="N4">
+																<entry name="F19" outkey="99"/>
+																<entry name="F156" outkey="100"/>
+																<entry name="F116" outkey="101"/>
+															</entry>
+														</entry>
+														<entry name="Loop2000B" expanded="1">
+															<entry name="Loop2010BA" expanded="1">
+																<entry name="NM1" expanded="1">
+																	<entry name="F1035" outkey="26"/>
+																	<entry name="F1036" outkey="48"/>
+																	<entry name="F67" outkey="102"/>
+																</entry>
+																<entry name="N3" expanded="1">
+																	<entry name="F166" outkey="156"/>
+																</entry>
+																<entry name="N4" expanded="1">
+																	<entry name="F19" outkey="103"/>
+																	<entry name="F156" outkey="104"/>
+																	<entry name="F116" outkey="105"/>
+																</entry>
+																<entry name="DMG" expanded="1">
+																	<entry name="F1251" outkey="106"/>
+																	<entry name="F1068" outkey="107"/>
+																</entry>
+															</entry>
+															<entry name="Loop2300" expanded="1">
+																<entry name="CLM">
+																	<entry name="C023" expanded="1"/>
+																</entry>
+																<entry name="REF_8" expanded="1">
+																	<entry name="F127" outkey="157"/>
+																</entry>
+																<entry name="Loop2400" expanded="1">
+																	<entry name="LX" outkey="108" expanded="1">
+																		<entry name="F554" outkey="109"/>
+																	</entry>
+																	<entry name="SV3" expanded="1">
+																		<entry name="C003" expanded="1">
+																			<entry name="F234" outkey="110"/>
+																			<entry name="F1339_1" outkey="111"/>
+																			<entry name="F352" outkey="112"/>
+																		</entry>
+																		<entry name="F782" outkey="113"/>
+																		<entry name="C004" expanded="1"/>
+																	</entry>
+																	<entry name="TOO" outkey="114" expanded="1">
+																		<entry name="F1271" outkey="115"/>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="edi" kind="EDIX12" inputinstance="837-Q2.x12" encoding="1" byteorder="1" byteordermark="0" config="HIPAA.X12\Envelope.Config">
+							<messages>
+								<message type="837-Q2"/>
+							</messages>
+							<settings unpackedformat="false" autocompletedata="true" terminatewithlinefeed="true" subelementseparator="%5E" interchangecontrolversionnumber="00501" requestacknowledgement="true">
+								<separators dataelement="*" component=":" subcomponent="" segment="~" decimal="." escape="%20" repetition="%5E"/>
+								<validation>
+									<case kind="missing-segment" action="stop"/>
+									<case kind="missing-group" action="stop"/>
+									<case kind="missing-field-or-composite" action="report+reject"/>
+									<case kind="extra-data" action="report+reject"/>
+									<case kind="invalid-field-value" action="report+reject"/>
+									<case kind="invalid-date" action="report+reject"/>
+									<case kind="invalid-time" action="report+reject"/>
+									<case kind="extra-repeat" action="report+reject"/>
+									<case kind="numeric-overflow" action="report+reject"/>
+									<case kind="data-element-too-short" action="report+reject"/>
+									<case kind="data-element-too-long" action="report+reject"/>
+									<case kind="unexpected-eof" action="stop"/>
+									<case kind="invalid-codelist-value" action="report+reject"/>
+									<case kind="semantic" action="report+reject"/>
+									<case kind="segment-not-in-message" action="stop"/>
+									<case kind="unrecognized-segment-id" action="stop"/>
+									<case kind="impl-not-used-present" action="report+reject"/>
+								</validation>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="61" edgekey="120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="68" edgekey="121"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="75" edgekey="122"/>
+							<edge vertexkey="83" edgekey="123"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="74" edgekey="124"/>
+							<edge vertexkey="82" edgekey="125"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="92">
+						<edges>
+							<edge vertexkey="62" edgekey="126"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="93">
+						<edges>
+							<edge vertexkey="63" edgekey="127"/>
+							<edge vertexkey="73" edgekey="128"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="94">
+						<edges>
+							<edge vertexkey="64" edgekey="129"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="65" edgekey="130"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="96">
+						<edges>
+							<edge vertexkey="67" edgekey="131"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="97">
+						<edges>
+							<edge vertexkey="160" edgekey="161"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="69" edgekey="133"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="99">
+						<edges>
+							<edge vertexkey="70" edgekey="134"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="100">
+						<edges>
+							<edge vertexkey="71" edgekey="135"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="72" edgekey="136"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="102">
+						<edges>
+							<edge vertexkey="80" edgekey="137"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="103">
+						<edges>
+							<edge vertexkey="76" edgekey="138"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="104">
+						<edges>
+							<edge vertexkey="77" edgekey="139"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="105">
+						<edges>
+							<edge vertexkey="78" edgekey="140"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="106">
+						<edges>
+							<edge vertexkey="116" edgekey="141"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107">
+						<edges>
+							<edge vertexkey="79" edgekey="142"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108">
+						<edges>
+							<edge vertexkey="84" edgekey="143"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="85" edgekey="144"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="110">
+						<edges>
+							<edge vertexkey="86" edgekey="145"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111">
+						<edges>
+							<edge vertexkey="87" edgekey="146"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="112">
+						<edges>
+							<edge vertexkey="88" edgekey="147"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113">
+						<edges>
+							<edge vertexkey="89" edgekey="148"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114">
+						<edges>
+							<edge vertexkey="90" edgekey="149"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="115">
+						<edges>
+							<edge vertexkey="91" edgekey="150"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="118">
+						<edges>
+							<edge vertexkey="81" edgekey="153"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="119">
+						<edges>
+							<edge vertexkey="117" edgekey="152"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="156">
+						<edges>
+							<edge vertexkey="154" edgekey="158"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="157">
+						<edges>
+							<edge vertexkey="155" edgekey="159"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
